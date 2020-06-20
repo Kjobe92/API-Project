@@ -7,7 +7,13 @@ html{
 
 .searchbar{
     display: flex;
+   
     justify-content: center;
+   
+}
+.searchbar input{
+    height: 40px;
+    width: 300px;
 }
 
 .img{
@@ -17,9 +23,13 @@ html{
 
 .submit{
     background-color: gold;
+    height: 50px;
+    width: 70px;
 }
+
 
 .list{
     display: flex;
     justify-content: center;
+    color: white;
 }
