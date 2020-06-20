@@ -1,0 +1,25 @@
+html{
+    background: url("./assets/Patronus.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(15, 12, 9, 0.5);
+    background-blend-mode: multiply;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+    background-color: gold;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+}
