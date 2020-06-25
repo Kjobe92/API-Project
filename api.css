@@ -7,8 +7,7 @@ html{
 
 .searchbar{
     display: flex;
-   
-    justify-content: center;
+   justify-content: center;
    
 }
 .searchbar input{
