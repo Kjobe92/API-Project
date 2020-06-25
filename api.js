@@ -31,89 +31,73 @@ fetch(url)
 
   .catch((err) => console.error({ error: err }));
 }
-// function displayResults(json) {
-//  while (section.firstChild) {
-//    section.removeChild(section.firstChild);
-//  }
+
+
+// const charPic = {
+//   'Harry Potter' : "https://media.contentapi.ea.com/content/dam/gin/images/2017/01/harry-potter-goblet-of-fire-key-art.jpg.adapt.crop3x5.533p.jpg",
 // }
 
 
 
 
-
-for(let i = 0; i < CharacterData.length; i++) {
-let alias = document.createElement('alias');
-let bloodStatus = document.createElement('bloodStatus');
-let boggart = document.createElement('boggart');
- let deathEater = document.createElement('deathEater');
-let dumbledoresArmy = document.createElement('dumbledoresArmy');
- let house = document.createElement('house');
-let ministryOfMagic = document.createElement('ministryOfMagic');
-let name = document.createElement('name');
-let orderOfThePhoenix = document.createElement('orderOfThePhoenix');
-let patronus = document.createElement('patronus');
-let role = document.createElement('role');
-let school = document.createElement('school');
-let species = document.createElement('species');
-let wand = document.createElement('wand');
-let _id = document.createElement('_id');
-
- }
-
-//  function displayCharacters(json) {
-//   document.getElementById('alias').innerHTML = `${alias}`;
-//   document.getElementById('bloodStatus').innerHTML = `${bloodStatus}`;
-//  }
  function displayCharacters(harry) {
   harry.forEach(harry => {
     let alias = document.createElement('li');
-    let draco = document.createElement('li');
-    let hagrid = document.createElement('li');
-    let herm = document.createElement('li');
-    let luna = document.createElement('li');
-    let bella = document.createElement('li');
-    let dumble = document.createElement('li');
-    let dobby = document.createElement('li');
-    let ginny = document.createElement('li');
-    let neville = document.createElement('li');
-    let volde = document.createElement('li');
-    let snape = document.createElement('li');
-    let tonks = document.createElement('li');
-    let molly = document.createElement('li');
-    alias.innerHTML = harry.alias;
-    draco.innerHTML = harry.bloodStatus;
-    hagrid.innerHTML = harry.boggart;
-    herm.innerHTML = harry.deathEater;
-    luna.innerHTML = harry.dumbledoresArmy;
-    bella.innerHTML = harry.house;
-    dumble.innerHTML = harry.ministryOfMagic;
-    dobby.innerHTML = harry.name;
-    ginny.innerHTML = harry.orderOfThePhoenix;
-    neville.innerHTML = harry.patronus;
-    volde.innerHTML = harry.role;
-    snape.innerHTML = harry.school;
-    tonks.innerHTML = harry.species;
-    molly.innerHTML = harry.wand;
+    let bloodStatus = document.createElement('li');
+    let boggart = document.createElement('li');
+    let deathEater = document.createElement('li');
+    let dumbledoresArmy = document.createElement('li');
+    let house = document.createElement('li');
+    let ministryOfMagic = document.createElement('li');
+    let name = document.createElement('li');
+    let orderOfThePhoenix = document.createElement('li');
+    let patronus = document.createElement('li');
+    let role = document.createElement('li');
+    let school = document.createElement('li');
+    let species = document.createElement('li');
+    let wand = document.createElement('li');
+    alias.innerHTML = "Alias:  " + harry.alias;
+    bloodStatus.innerHTML = "Blood Status:  " + harry.bloodStatus;
+    boggart.innerHTML = `Boggart: ${harry.boggart}`;
+    deathEater.innerHTML = "Death Eater:  " + harry.deathEater;
+    dumbledoresArmy.innerHTML = "Dumbledore's Army:  " + harry.dumbledoresArmy;
+    house.innerHTML = "House:  " + harry.house;
+    ministryOfMagic.innerHTML = "Ministry Of Magic:  " + harry.ministryOfMagic;
+    name.innerHTML = "Name:  " + harry.name;
+    orderOfThePhoenix.innerHTML = "Order Of The Phoenix:  " + harry.orderOfThePhoenix;
+    patronus.innerHTML = "Patronus:  " + harry.patronus;
+    role.innerHTML = "Role:  " + harry.role;
+    school.innerHTML = "School:  " + harry.school;
+    species.innerHTML = "Species:  " + harry.species;
+    wand.innerHTML = "Wand:  " + harry.wand;
     harryPotter.appendChild(alias);
-    harryPotter.appendChild(draco);
-    harryPotter.appendChild(hagrid);
-    harryPotter.appendChild(herm);
-    harryPotter.appendChild(luna);
-    harryPotter.appendChild(bella);
-    harryPotter.appendChild(dumble);
-    harryPotter.appendChild(dobby);
-    harryPotter.appendChild(ginny);
-    harryPotter.appendChild(neville);
-    harryPotter.appendChild(volde);
-    harryPotter.appendChild(snape);
-    harryPotter.appendChild(tonks);
-    harryPotter.appendChild(molly);
+    harryPotter.appendChild(bloodStatus);
+    harryPotter.appendChild(boggart);
+    harryPotter.appendChild(deathEater);
+    harryPotter.appendChild(dumbledoresArmy);
+    harryPotter.appendChild(house);
+    harryPotter.appendChild(ministryOfMagic);
+    harryPotter.appendChild(name);
+    harryPotter.appendChild(orderOfThePhoenix);
+    harryPotter.appendChild(patronus);
+    harryPotter.appendChild(role);
+    harryPotter.appendChild(school);
+    harryPotter.appendChild(species);
+    harryPotter.appendChild(wand);
   });
 }
 
+// let image = document.createElement('img');
+// section.appendChild(image);
 
 
+// for(pic in charPic) {
+//   console.log('name', name); //character is the character from the quote from the API
+//   console.log('pic', pic); //represents each character in our charPic object;
+//   if(name === pic) {
+//       image.src = charPic[pic]
+//   }
+// }
 
-//Create Elements, assigning data (the data you get back from the ApI you assign to the elements
-// you created),
-//Append those newly created elements and send them back to the DOM
+//change ul to list 
+//put p tags in html

@@ -29,7 +29,16 @@ html{
 
 
 .list{
-    display: flex;
+    display: block;
     justify-content: center;
-    color: white;
+    color: gold;
+    font-size: 2em;
+}
+
+
+.button{
+    background-color: gold;
+    height: 50px;
+    width: 70px;
+    position: absolute;
 }
