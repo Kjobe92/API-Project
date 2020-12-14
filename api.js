@@ -1,25 +1,26 @@
-console.log("Always");
+console.log("Winter is coming");
 
-let baseUrl = "https://www.potterapi.com/v1/characters";
-const key = "$2a$10$EgSXpeAjuDioaznk1qmjCuxR.8IAhX/NWSLufxhmpgEOkb0Z/iP86";
+let baseUrl = "https://www.anapioficeandfire.com/api/characters/";
+// const key = "$2a$10$EgSXpeAjuDioaznk1qmjCuxR.8IAhX/NWSLufxhmpgEOkb0Z/iP86";
 let url;
 const section = document.getElementById("ranDOMdivId");
 const searchTerm = document.querySelector(".search");
 const searchForm = document.querySelector("form");
 const submitButton = document.querySelector(".submit");
-const harryPotter = document.querySelector('ul');
+const aryaStark = document.querySelector('ul');
 // const section = document.querySelector('section');
 const abo = document.querySelector(".abo");
 const alias = document.querySelector("alias");
 const bloodStatus = document.querySelector("bloodStatus");
 
 searchForm.addEventListener('submit', fetchResults);
+
 function fetchResults(e){
   e.preventDefault();
-url = `${baseUrl}?key=${key}&name=${searchTerm.value}`;
+url = `${baseUrl}&name=${searchTerm.value}`;
 console.log("URL:", url);
 
-fetch(url)
+fetch(baseUrl)
   .then(function (result) {
     console.log(result);
     return result.json();
@@ -40,53 +41,50 @@ fetch(url)
 
 
 
- function displayCharacters(harry) {
-  harry.forEach(harry => {
-    let alias = document.createElement('li');
-    let bloodStatus = document.createElement('li');
-    let boggart = document.createElement('li');
-    let deathEater = document.createElement('li');
-    let dumbledoresArmy = document.createElement('li');
-    let house = document.createElement('li');
-    let ministryOfMagic = document.createElement('li');
+ function displayCharacters(arya) {
+  arya.forEach(arya => {
+    let aliases = document.createElement('li');
+    let books = document.createElement('li');
+    let culture = document.createElement('li');
+    let born = document.createElement('li');
+    let father = document.createElement('li');
+    let gender = document.createElement('li');
+    let mother = document.createElement('li');
     let name = document.createElement('li');
-    let orderOfThePhoenix = document.createElement('li');
-    let patronus = document.createElement('li');
-    let role = document.createElement('li');
-    let school = document.createElement('li');
-    let species = document.createElement('li');
-    let wand = document.createElement('li');
-    alias.innerHTML = "Alias:  " + harry.alias;
-    bloodStatus.innerHTML = "Blood Status:  " + harry.bloodStatus;
-    boggart.innerHTML = `Boggart: ${harry.boggart}`;
-    deathEater.innerHTML = "Death Eater:  " + harry.deathEater;
-    dumbledoresArmy.innerHTML = "Dumbledore's Army:  " + harry.dumbledoresArmy;
-    house.innerHTML = "House:  " + harry.house;
-    ministryOfMagic.innerHTML = "Ministry Of Magic:  " + harry.ministryOfMagic;
-    name.innerHTML = "Name:  " + harry.name;
-    orderOfThePhoenix.innerHTML = "Order Of The Phoenix:  " + harry.orderOfThePhoenix;
-    patronus.innerHTML = "Patronus:  " + harry.patronus;
-    role.innerHTML = "Role:  " + harry.role;
-    school.innerHTML = "School:  " + harry.school;
-    species.innerHTML = "Species:  " + harry.species;
-    wand.innerHTML = "Wand:  " + harry.wand;
-    harryPotter.appendChild(alias);
-    harryPotter.appendChild(bloodStatus);
-    harryPotter.appendChild(boggart);
-    harryPotter.appendChild(deathEater);
-    harryPotter.appendChild(dumbledoresArmy);
-    harryPotter.appendChild(house);
-    harryPotter.appendChild(ministryOfMagic);
-    harryPotter.appendChild(name);
-    harryPotter.appendChild(orderOfThePhoenix);
-    harryPotter.appendChild(patronus);
-    harryPotter.appendChild(role);
-    harryPotter.appendChild(school);
-    harryPotter.appendChild(species);
-    harryPotter.appendChild(wand);
+    let playedBy = document.createElement('li');
+    let povBooks = document.createElement('li');
+    let spouse = document.createElement('li');
+    let titles = document.createElement('li');
+    
+    aliases.innerHTML = "Aliases:  " + arya.aliases;
+    books.innerHTML = "Books:  " + arya.books;
+    culture.innerHTML = `Culture: ${arya.culture}`;
+    born.innerHTML = "Born:  " + arya.born;
+    father.innerHTML = "Father:  " + arya.father;
+    gender.innerHTML = "Gender:  " + arya.gender;
+    mother.innerHTML = "Mother:  " + arya.mother;
+    name.innerHTML = "Name:  " + arya.name;
+    playedBy.innerHTML = "Played By:  " + arya.playedBy;
+    povBooks.innerHTML = "Books:  " + arya.povBooks;
+    spouse.innerHTML = "Spouse:  " + arya.spouse;
+    titles.innerHTML = "Titles:  " + arya.titles;
+   
+    aryaStark.appendChild(aliases);
+    aryaStark.appendChild(books);
+    aryaStark.appendChild(culture);
+    aryaStark.appendChild(born);
+    aryaStark.appendChild(father);
+    aryaStark.appendChild(gender);
+    aryaStark.appendChild(mother);
+    aryaStark.appendChild(name);
+    aryaStark.appendChild(playedBy);
+    aryaStark.appendChild(books);
+    aryaStark.appendChild(spouse);
+    aryaStark.appendChild(titles);
   });
 }
 
+ // Set source path
 // let image = document.createElement('img');
 // section.appendChild(image);
 
