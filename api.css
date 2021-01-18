@@ -1,5 +1,5 @@
 html{
-    background: url("./assets/Patronus.jpg") no-repeat center center fixed;
+    background: url("./assets/lord\ of\ the\ rings.jpg") no-repeat center center fixed;
     background-size: cover;
     background-color: rgba(15, 12, 9, 0.5);
     background-blend-mode: multiply;
@@ -8,6 +8,7 @@ html{
 .searchbar{
     display: flex;
    justify-content: center;
+   padding-top: 50px;
    
 }
 .searchbar input{
@@ -21,7 +22,8 @@ html{
 }
 
 .submit{
-    background-color: gold;
+    background-color: darkblue;
+    color: white;
     height: 50px;
     width: 70px;
 }
@@ -30,13 +32,14 @@ html{
 .list{
     display: block;
     justify-content: center;
-    color: gold;
+    color: white;
     font-size: 2em;
 }
 
 
 .button{
-    background-color: gold;
+    background-color: darkblue;
+    color: white;
     height: 50px;
     width: 70px;
     position: absolute;
