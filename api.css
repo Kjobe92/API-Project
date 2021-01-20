@@ -1,7 +1,7 @@
 html{
-    background: url("./assets/lord\ of\ the\ rings.jpg") no-repeat center center fixed;
+    background: url("./assets/lego2.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-color: rgba(15, 12, 9, 0.5);
+    /* background-color: rgba(15, 12, 9, 0.5); */
     background-blend-mode: multiply;
 }
 
@@ -46,8 +46,8 @@ html{
 }
 
 .results{
-    color: gold;
-    font-size: medium;
+    color:olive;
+    font-size: 30px;
     padding-top: 60px;
-    
+    font-weight: bold;
 }

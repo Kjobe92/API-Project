@@ -15,9 +15,9 @@ const spouse = document.querySelector("spouse");
 
 searchForm.addEventListener('submit', fetchResults);
 
-const racePic = {
-  Gandalf : 'https://static.wikia.nocookie.net/lotr/images/8/8d/Gandalf-2.jpg/revision/latest/scale-to-width-down/340?cb=20130209172436'
-}
+// const racePic = {
+//   Gandalf : 'https://static.wikia.nocookie.net/lotr/images/8/8d/Gandalf-2.jpg/revision/latest/scale-to-width-down/340?cb=20130209172436'
+// }
 
 function fetchResults(e){
   e.preventDefault();
@@ -54,7 +54,7 @@ fetch(url, {
     document.getElementById('spouse1')
     document.getElementById('wiki1')
     
-    section.appendChild(img)
+    // section.appendChild(img)
     
     characterName.innerText = "Name: " + newData.name
     birth.innerText = "Birth: " + newData.birth
@@ -83,10 +83,10 @@ fetch(url, {
             height.innerText = "Height: " + newData.height
           }
 
-          let character;
+          // let character;
           
-          if (character === 'Gandalf'){
-            img.src = racePic.Gandalf
-          }
+          // if (character === 'Gandalf'){
+          //   img.src = racePic.Gandalf
+          // }
   };
  }
