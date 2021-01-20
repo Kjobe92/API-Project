@@ -44,3 +44,10 @@ html{
     width: 70px;
     position: absolute;
 }
+
+.results{
+    color: gold;
+    font-size: medium;
+    padding-top: 60px;
+    
+}

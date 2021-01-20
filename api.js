@@ -15,6 +15,10 @@ const spouse = document.querySelector("spouse");
 
 searchForm.addEventListener('submit', fetchResults);
 
+const racePic = {
+  Gandalf : 'https://static.wikia.nocookie.net/lotr/images/8/8d/Gandalf-2.jpg/revision/latest/scale-to-width-down/340?cb=20130209172436'
+}
+
 function fetchResults(e){
   e.preventDefault();
 url = `${baseUrl}${searchTerm.value}`;
@@ -29,46 +33,60 @@ fetch(url, {
 })
 .then(res => res.json())
 .then(json => displayCharacters(json))
+.catch((err) => console.error({ error: err }));
 
-
-  .catch((err) => console.error({ error: err }));
-}
 
 
 
  function displayCharacters(json) {
-  json.forEach(frodo => { 
-    let birth = document.createElement('li');
-    let death = document.createElement('li');
-    let gender = document.createElement('li');
-    let hair = document.createElement('li');
-    let height = document.createElement('li');
-    let name = document.createElement('li');
-    let race = document.createElement('li');
-    let realm = document.createElement('li');
-    let spouse = document.createElement('li');
-    let wikiUrl = document.createElement('li');
+   console.log(json)
+   let newData = json.docs[0]
+  //  let name1 =document.createElement('li')
+    let img = document.createElement('img')
+    document.getElementById('characterName')
+    document.getElementById("birth")
+    document.getElementById('death')
+    document.getElementById('gender')
+    document.getElementById('hair')
+    document.getElementById('height')
+    document.getElementById('race')
+    document.getElementById('realm1')
+    document.getElementById('spouse1')
+    document.getElementById('wiki1')
     
-    birth.innerHTML = "Birth:  " + frodo.birth;
-    death.innerHTML = "Death:  " + frodo.death;
-    gender.innerHTML = "Gender" + frodo.gender;
-    hair.innerHTML = "Hair:  " + frodo.hair;
-    height.innerHTML = "Height:  " + frodo.height;
-    name.innerHTML = "Name:  " + frodo.name;
-    race.innerHTML = "Race:  " + frodo.race;
-    realm.innerHTML = "Realm:  " + frodo.realm;
-    spouse.innerHTML = "Spouse:  " + frodo.spouse;
-    wikiUrl.innerHTML = "Wiki Url:  " + frodo.wikiUrl;
-   
-    frodoBaggins.appendChild(birth);
-    frodoBaggins.appendChild(death);
-    frodoBaggins.appendChild(gender);
-    frodoBaggins.appendChild(hair);
-    frodoBaggins.appendChild(height);
-    frodoBaggins.appendChild(name);
-    frodoBaggins.appendChild(race);
-    frodoBaggins.appendChild(realm);
-    frodoBaggins.appendChild(spouse);
-    frodoBaggins.appendChild(wikiUrl);
-  });
+    section.appendChild(img)
+    
+    characterName.innerText = "Name: " + newData.name
+    birth.innerText = "Birth: " + newData.birth
+    death.innerText = "Death: " + newData.death
+    gender.innerText = "Gender: " + newData.gender
+    hair.innerText = "Hair: " + newData.hair
+    height.innerText = "Height: " + newData.height
+    race.innerText = "Race: " + newData.race
+    realm1.innerText = "Realm: " + newData.realm
+    spouse1.innerText = "Spouse: " + newData.spouse
+    wiki1.innerText = "WikiURL: " + newData.wikiUrl
+    
+    if(newData.spouse == ""){
+      spouse1.innerText = "Spouse: Null"
+      } else {
+        spouse1.innerText = "Spouse: " + newData.spouse
+      }
+      if(newData.realm == ""){
+        realm1.innerText = "Realm: Null"
+        } else {
+          realm1.innerText = "Realm: " + newData.realm
+        }
+        if(newData.height == ""){
+          height.innerText = "Height: Null"
+          } else {
+            height.innerText = "Height: " + newData.height
+          }
+
+          let character;
+          
+          if (character === 'Gandalf'){
+            img.src = racePic.Gandalf
+          }
+  };
  }
